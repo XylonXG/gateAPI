@@ -1,0 +1,1208 @@
+{
+	"info": {
+		"_postman_id": "8c904856-36ae-4266-a461-c34a0e8fee46",
+		"name": "gateAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9782749"
+	},
+	"item": [
+		{
+			"name": "spot",
+			"item": [
+				{
+					"name": "查询所有币种信息",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/currencies",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"currencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询单个币种信息",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/currencies/BTC",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"currencies",
+								"BTC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询支持的所有交易对",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/currency_pairs",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"currency_pairs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询单个交易对详情",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/currency_pairs/BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"currency_pairs",
+								"BTC_USDT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取交易对 ticker 信息",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/tickers?currency_pair=GT_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"tickers"
+							],
+							"query": [
+								{
+									"key": "currency_pair",
+									"value": "GT_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取市场深度信息",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/order_book?currency_pair=BTC_USDT&limit=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"order_book"
+							],
+							"query": [
+								{
+									"key": "currency_pair",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询市场成交记录",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/trades?currency_pair=BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"trades"
+							],
+							"query": [
+								{
+									"key": "currency_pair",
+									"value": "BTC_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "市场 K 线图",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/candlesticks?currency_pair=BTC_USDT&limit=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"candlesticks"
+							],
+							"query": [
+								{
+									"key": "currency_pair",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取服务器当前时间",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// pm.test(\"Response status code is 200\", function () {\r",
+									"//   pm.response.to.have.status(200);\r",
+									"// });\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/spot/time",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"spot",
+								"time"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "futures",
+			"item": [
+				{
+					"name": "查询所有的合约信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询单个合约信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts/BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts",
+								"BTC_USDT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询合约市场深度信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/order_book?contract=BTC_USDT&limit=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"order_book"
+							],
+							"query": [
+								{
+									"key": "contract",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约市场成交记录",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/trades?contract=BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"trades"
+							],
+							"query": [
+								{
+									"key": "contract",
+									"value": "BTC_USDT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约市场 K 线图",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/candlesticks?contract=BTC_USDT&limit=2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"candlesticks"
+							],
+							"query": [
+								{
+									"key": "contract",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约溢价指数 K 线图",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取所有合约交易行情统计",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约市场历史资金费率",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约市场保险基金历史",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/insurance?limit=2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"insurance"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "合约统计信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contract_stats?contract=BTC_USDT&limit=2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contract_stats"
+							],
+							"query": [
+								{
+									"key": "contract",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询指数来源",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/index_constituents/BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"index_constituents",
+								"BTC_USDT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询强平委托历史",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/liq_orders?limit=5",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"liq_orders"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询风险限额等级",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/risk_limit_tiers?contract=BTC_USDT",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"risk_limit_tiers"
+							],
+							"query": [
+								{
+									"key": "contract",
+									"value": "BTC_USDT"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询所有的合约信息 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.gateio.ws/api/v4/futures/usdt/contracts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"gateio",
+								"ws"
+							],
+							"path": [
+								"api",
+								"v4",
+								"futures",
+								"usdt",
+								"contracts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "options",
+			"item": []
+		}
+	]
+}
