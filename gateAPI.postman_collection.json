@@ -109,7 +109,7 @@
 					"response": []
 				},
 				{
-					"name": "查询支持的所有交易对",
+					"name": "查询支持的所有交易对 ",
 					"event": [
 						{
 							"listen": "prerequest",
